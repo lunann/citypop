@@ -1,26 +1,67 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component } from 'react';
+import {HashRouter as Router, Switch, Route} from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import MainContent from "./MainContent"
+import SearchCity from "./SearchCity"
+import SearchCountry from "./SearchCountry"
+
+//Population land
+//http://api.geonames.org/search?name_equals=france&type=json&username=weknowit
+//Population städer länder
+//http://api.geonames.org/search?country=FR&type=json&username=weknowit
+
+class App extends Component {
+  
+    constructor(props) {
+        super(props);
+        this.state = {
+            items: [],
+            isLoaded: false,
+        }
+    }
+    
+    componentDidMount() {
+        fetch('http://api.geonames.org/search?name_equals=france&type=json&username=weknowit')
+            .then(result => result.json())
+            .then(json => {
+                this.setState({
+                    isLoaded: true,
+                    items: json,
+                })
+        })
+    }
+    
+    render(){
+        
+        var { isLoaded, items } = this.state;
+        
+        if (!isLoaded){
+            return (
+                <div>Loading...</div>
+            );
+        }
+        
+        else {
+            return (
+                <Router>
+                    <div className="App">
+                        Citypop
+                        <Switch>
+                            <Route exact path="/" component={Home}/>
+                            <Route exact path="/SearchCity" component={SearchCity}/>
+                            <Route exact path="/SearchCountry" component={SearchCountry}/>
+                        </Switch>
+                    </div>
+                </Router>
+            );
+        }
+    }
 }
+
+const Home = () => (
+    <div>
+        test
+    </div>
+);
 
 export default App;
