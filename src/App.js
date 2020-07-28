@@ -1,9 +1,12 @@
 import React, {Component } from 'react';
 import {HashRouter as Router, Switch, Route} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import MainContent from "./MainContent"
 import SearchCity from "./SearchCity"
 import SearchCountry from "./SearchCountry"
+import City from "./City"
+import Country from "./Country"
 
 //Population land
 //http://api.geonames.org/search?name_equals=france&type=json&username=weknowit
@@ -48,8 +51,10 @@ class App extends Component {
                         Citypop
                         <Switch>
                             <Route exact path="/" component={Home}/>
-                            <Route exact path="/SearchCity" component={SearchCity}/>
-                            <Route exact path="/SearchCountry" component={SearchCountry}/>
+                            <Route exact path="/search-city" component={SearchCity}/>
+                            <Route exact path="/search-country" component={SearchCountry}/>
+                            <Route path="/search-city/:cityId" component={City}/>
+                            <Route path="/search-country/:countryId" component={Country}/>
                         </Switch>
                     </div>
                 </Router>
@@ -60,7 +65,10 @@ class App extends Component {
 
 const Home = () => (
     <div>
-        test
+        <Link className="hyperlinks-nav" id="up-left" to='/search-city'>
+                Search city</Link>
+        <Link className="hyperlinks-nav" id="up-left" to='/search-country'>
+                Search country</Link>
     </div>
 );
 
