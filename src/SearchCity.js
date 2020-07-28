@@ -24,7 +24,7 @@ class SearchCity extends Component {
             <div class="homePage">            
                 Search by city
                 <input type="text" value={this.state.value} onChange={this.handleChange} />
-                <Link to={"/search-country/"+this.state.value}><input type="submit" value="Submit"/></Link>
+                <Link to={"/search-city/"+this.state.value}><input type="submit" value="Submit"/></Link>
             </div>
         )
     }

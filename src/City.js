@@ -7,19 +7,44 @@ class City extends Component {
         super(props);
         console.log(props)
         this.state = {
-            id: this.props.match.params.cityId
+            items: [],
+            isLoaded: false,
+            cityId: this.props.match.params.cityId
         }
         
-        console.log(this.state.id)
+        console.log(this.state.cityId)
  
+    }
+    
+    componentDidMount() {
+        fetch('http://api.geonames.org/search?name_equals=' + this.state.cityId + '&type=json&username=weknowit')
+            .then(result => result.json())
+            .then(json => {
+                this.setState({
+                    isLoaded: true,
+                    items: json,
+                })
+        })
     }
 
     render(){
-        return (
-            <div class="homePage">            
-                {this.state.id}
-            </div>
-        )
+        var { isLoaded, items } = this.state;
+        
+        if (!isLoaded){
+            return (
+                <div>Loading...</div>
+            );
+        }
+        else {
+            return (
+                <div class="homePage">            
+                    {this.state.cityId}
+                    <br></br>
+                    {this.state.items.geonames[0].population}       
+                </div>
+            )
+        }
+        
     }
 }
 export default City

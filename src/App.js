@@ -54,7 +54,7 @@ class App extends Component {
                             <Route exact path="/search-city" component={SearchCity}/>
                             <Route exact path="/search-country" component={SearchCountry}/>
                             <Route path="/search-city/:cityId" component={City}/>
-                            <Route path="/search-country/:countryId" component={Country}/>
+                            <Route path="/search-country/:countryId" component={Country}/>                
                         </Switch>
                     </div>
                 </Router>
