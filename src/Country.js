@@ -19,7 +19,7 @@ class Country extends Component {
  
     }
     componentDidMount() {
-        fetch('http://api.geonames.org/search?name_equals=' + this.state.countryId + '&type=json&username=weknowit')
+        fetch('http://api.geonames.org/search?name_equals=' + this.state.countryId + '&q=PCLI&type=json&username=weknowit')
             .then(result => result.json())
             .then(data => {
                 this.setState({
