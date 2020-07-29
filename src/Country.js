@@ -41,15 +41,16 @@ class Country extends Component {
             if (this.state.items.length == 0){
                 return (
                     <div>
-                        <h2>{this.state.countryId}</h2>
+                        <h2 style={{ textTransform: 'uppercase'}}>{this.state.countryId}</h2>
                         <p>Hittar inte landet</p>
                     </div>
                 );
             }
             else {
                 return (
-                    <div class="homePage">            
-                        <h2>{this.state.countryId}</h2>
+                    <div class="homePage"> 
+                        <p>country</p>
+                        <h2  style={{ textTransform: 'uppercase'}}>{this.state.countryId}</h2>
                         <MainContent countryCode={this.state.items[0].countryCode}/>
 
                     </div>

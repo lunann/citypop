@@ -1,5 +1,6 @@
 import React, {Component } from 'react';
 import { Link } from 'react-router-dom'
+import NumberFormat from 'react-number-format'; 
 
 import './display-results.css'
 
@@ -41,19 +42,21 @@ class City extends Component {
             if (this.state.items.length == 0){
                 return (
                     <div>
-                        <h2>{this.state.cityId}</h2>
+                        <p>city</p>
+                        <h2 style={{ textTransform: 'uppercase'}}>{this.state.cityId}</h2>
                         <p>Hittar inte staden</p>
                     </div>
                 );
             }
             else {
                 return (
-                    <div class="city-page">            
-                        <h2>{this.state.cityId}</h2>
+                    <div class="city-page">
+                        <p>city</p>
+                        <h2 style={{ textTransform: 'uppercase'}}>{this.state.cityId}</h2>
                         <br></br>
                         <div className="population-info">
                             <h3>Population</h3>
-                            <p>{this.state.items[0].population}</p>
+                            <p><NumberFormat value={this.state.items[0].population} displayType={'text'} thousandSeparator={true}/></p>
                         </div>
                     </div>
                 )
