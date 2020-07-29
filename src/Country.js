@@ -38,13 +38,23 @@ class Country extends Component {
             );
         }
         else {
-            return (
-                <div class="homePage">            
-                    {this.state.countryId}
-                    <MainContent countryCode={this.state.items.geonames[0].countryCode}/>
-                   
-                </div>
-            )
+            if (this.state.items.length == 0){
+                return (
+                    <div>
+                        {this.state.cityId}
+                        <p>Hittar inte staden</p>
+                    </div>
+                );
+            }
+            else {
+                return (
+                    <div class="homePage">            
+                        {this.state.countryId}
+                        <MainContent countryCode={this.state.items.geonames[0].countryCode}/>
+
+                    </div>
+                )
+            }
         }
     }
 }

@@ -22,11 +22,10 @@ class SearchCountry extends Component {
     render(){
         return (
             <div class="homePage">            
-                Search by country
+                <h2>Search by country</h2>
                 <input type="text" value={this.state.value} onChange={this.handleChange} />
                 <Link to={"/search-country/"+this.state.value}><input type="submit" value="Submit"/></Link>
             </div>
-        
         )
     }
 }

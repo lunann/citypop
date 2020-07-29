@@ -22,7 +22,7 @@ class SearchCity extends Component {
     render(){
         return (
             <div class="homePage">            
-                Search by city
+                <h2>Search by city</h2>
                 <input type="text" value={this.state.value} onChange={this.handleChange} />
                 <Link to={"/search-city/"+this.state.value}><input type="submit" value="Submit"/></Link>
             </div>
