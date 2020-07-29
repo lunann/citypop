@@ -1,0 +1,29 @@
+.city-page {
+    text-align: center;
+}
+.population-info, .top-three-cities-population{
+    background-color: white;
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 2px;
+    border: 1px solid black;
+}
+.population-info p {
+    font-size: 50px;
+}
+.wrapper {
+    text-align: center;
+}
+.top-three-cities-population a {
+    font-family: 'Roboto', sans-serif;
+}
+.city {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid black;
+}
+.city#last-city {
+    border-bottom: 0px;
+}

@@ -1,6 +1,8 @@
 import React, {Component } from 'react';
 import { Link } from 'react-router-dom'
 
+import './display-results.css'
+
 class MainContent extends Component {
     
     constructor(props) {
@@ -24,16 +26,8 @@ class MainContent extends Component {
     }
 
     render () {
-        
-        {console.log("state ", this.state)}
-        
+                
         var { isLoaded, items } = this.state;
-        
-        const myData = this.state;
-        
-        {console.log("myData", myData)}
-        
-        {console.log(myData.items.geonames)}
         
         
         if (!isLoaded){
@@ -42,19 +36,26 @@ class MainContent extends Component {
             );
         }
         else {
-            return (
-                <div class="homePage">
-                   
-                    
-                    
-                    <Link to={"/search-city/" + this.state.items[0].name}>{this.state.items[0].name}</Link><br></br>
-                    <Link to={"/search-city/" + this.state.items[1].name}>{this.state.items[1].name}</Link><br></br>
-                    <Link to={"/search-city/" + this.state.items[2].name}>{this.state.items[2].name}</Link><br></br>
-                    {console.log(this.state)}
-
-
-                </div>
-            )
+            if (this.state.items.length == 0){
+                return (
+                    <div>
+                        <h2>{this.state.value}</h2>
+                        <p>Hittar inte landet</p>
+                    </div>
+                );
+            }
+            else {
+                return (
+                    <div class="wrapper">
+                        <div className="top-three-cities-population">
+                            <Link to={"/search-city/" + this.state.items[0].name} className="city">{this.state.items[0].name}</Link>
+                            <Link to={"/search-city/" + this.state.items[1].name} className="city">{this.state.items[1].name}</Link>
+                            <Link to={"/search-city/" + this.state.items[2].name} className="city" id="last-city">{this.state.items[2].name}</Link>
+                            {console.log(this.state)}
+                        </div>
+                    </div>
+                )
+            }
         }
     }
 }

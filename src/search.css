@@ -1,0 +1,17 @@
+input[type=text]{
+    color: black;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    padding: 8px;
+    margin: 20px;
+    border-radius: 2px;
+    border: 1px solid black;
+}
+input[type=submit]{
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    padding: 8px;
+    border-radius: 2px;
+    border: 0px;
+}

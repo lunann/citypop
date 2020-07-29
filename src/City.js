@@ -1,6 +1,8 @@
 import React, {Component } from 'react';
 import { Link } from 'react-router-dom'
 
+import './display-results.css'
+
 class City extends Component {
     
     constructor(props) {
@@ -18,18 +20,17 @@ class City extends Component {
     componentDidMount() {
         fetch('http://api.geonames.org/search?name_equals=' + this.state.cityId + '&cities=cities1000&orderby=population&type=json&username=weknowit')
             .then(result => result.json())
-            .then(json => {
+            .then(data => {
                 this.setState({
                     isLoaded: true,
-                    items: json.geonames,
+                    items: data.geonames,
                 })
         })
     }
 
     render(){
         var { isLoaded, items } = this.state;
-        
-        {console.log(this.state)}
+
         
         if (!isLoaded){
             return (
@@ -40,17 +41,20 @@ class City extends Component {
             if (this.state.items.length == 0){
                 return (
                     <div>
-                        {this.state.cityId}
+                        <h2>{this.state.cityId}</h2>
                         <p>Hittar inte staden</p>
                     </div>
                 );
             }
             else {
                 return (
-                    <div class="homePage">            
-                        {this.state.cityId}
+                    <div class="city-page">            
+                        <h2>{this.state.cityId}</h2>
                         <br></br>
-                        {this.state.items[0].population}       
+                        <div className="population-info">
+                            <h3>Population</h3>
+                            <p>{this.state.items[0].population}</p>
+                        </div>
                     </div>
                 )
             }

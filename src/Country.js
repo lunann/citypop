@@ -1,6 +1,8 @@
 import React, {Component } from 'react';
 import { Link } from 'react-router-dom'
 
+import './display-results.css'
+
 import MainContent from './MainContent'
 
 class Country extends Component {
@@ -19,19 +21,17 @@ class Country extends Component {
     componentDidMount() {
         fetch('http://api.geonames.org/search?name_equals=' + this.state.countryId + '&type=json&username=weknowit')
             .then(result => result.json())
-            .then(json => {
+            .then(data => {
                 this.setState({
                     isLoaded: true,
-                    items: json,
+                    items: data.geonames,
                 })
         })
-        {console.log("state 1", this.state)}
     }
 
     render(){
         var { isLoaded, items } = this.state;
         
-        {console.log("state 2", this.state)}
         if (!isLoaded){
             return (
                 <div>Loading...</div>
@@ -41,16 +41,16 @@ class Country extends Component {
             if (this.state.items.length == 0){
                 return (
                     <div>
-                        {this.state.cityId}
-                        <p>Hittar inte staden</p>
+                        <h2>{this.state.countryId}</h2>
+                        <p>Hittar inte landet</p>
                     </div>
                 );
             }
             else {
                 return (
                     <div class="homePage">            
-                        {this.state.countryId}
-                        <MainContent countryCode={this.state.items.geonames[0].countryCode}/>
+                        <h2>{this.state.countryId}</h2>
+                        <MainContent countryCode={this.state.items[0].countryCode}/>
 
                     </div>
                 )
