@@ -1,4 +1,5 @@
 import React, {Component } from 'react';
+import { Link } from 'react-router-dom'
 
 class MainContent extends Component {
     
@@ -11,20 +12,30 @@ class MainContent extends Component {
         }
     }
     componentDidMount() {
-        fetch('http://api.geonames.org/search?country=' + this.state.countryCode + '&type=json&username=weknowit')
+        fetch('http://api.geonames.org/search?country=' + this.state.countryCode + '&cities=cities15000&orderby=population&type=json&username=weknowit')
             .then(result => result.json())
-            .then(json => {
+            .then((data) => {
+                console.log("data",data.geonames)
                 this.setState({
                     isLoaded: true,
-                    items: json,
+                    items: data.geonames
                 })
-        })
+            })
     }
+
     render () {
+        
+        {console.log("state ", this.state)}
         
         var { isLoaded, items } = this.state;
         
-        {console.log("state ", this.state)}
+        const myData = this.state;
+        
+        {console.log("myData", myData)}
+        
+        {console.log(myData.items.geonames)}
+        
+        
         if (!isLoaded){
             return (
                 <div>Loading...</div>
@@ -32,10 +43,13 @@ class MainContent extends Component {
         }
         else {
             return (
-                <div class="homePage">            
-                    {this.state.items.geonames[0].name}<br></br>
-                    {this.state.items.geonames[1].name}<br></br>
-                    {this.state.items.geonames[2].name}<br></br>
+                <div class="homePage">
+                   
+                    
+                    
+                    <Link to={"/search-city/" + this.state.items[0].name}>{this.state.items[0].name}</Link><br></br>
+                    <Link to={"/search-city/" + this.state.items[1].name}>{this.state.items[1].name}</Link><br></br>
+                    <Link to={"/search-city/" + this.state.items[2].name}>{this.state.items[2].name}</Link><br></br>
                     {console.log(this.state)}
 
 
@@ -45,3 +59,5 @@ class MainContent extends Component {
     }
 }
 export default MainContent
+
+//.sort((a,b) => b.population - a.population)
