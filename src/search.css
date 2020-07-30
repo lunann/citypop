@@ -34,10 +34,5 @@ input[type=submit]:hover {
     border-radius: 4px;
     margin-top: 10px;
     padding: 5px;
-}
-#search-type {
-    margin-left: -35px;
-}
-#search-result-name {
-    margin-left: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }

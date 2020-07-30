@@ -49,11 +49,11 @@ class Country extends Component {
             else {
                 return (
                     <div class="homePage"> 
-                        <p id="search-type">country</p>
+                        <p id="search-type">top three populated citis in</p>
                         <h2  style={{ textTransform: 'uppercase'}}>{this.state.countryId}</h2>
-                        <div className="result-field">
-                            <MainContent countryCode={this.state.items[0].countryCode}/>
-                        </div>
+                        
+                        <MainContent countryCode={this.state.items[0].countryCode}/>
+                        
                     </div>
                 )
             }

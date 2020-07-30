@@ -51,12 +51,11 @@ class City extends Component {
             else {
                 return (
                     <div class="city-page">
-                        <p id="search-type">city</p>
+                        <p id="search-type">population in</p>
                         <h2 style={{ textTransform: 'uppercase'}} id="search-result-name">{this.state.cityId}</h2>
                             <div className="result-field">
                                 <div className="population-info">
                                     <h3><NumberFormat value={this.state.items[0].population} displayType={'text'} thousandSeparator={true}/></h3>
-                                    <p>population</p>
                                 </div>
                             </div>
                     </div>

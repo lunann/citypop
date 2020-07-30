@@ -12,10 +12,12 @@ h1 {
     letter-spacing: 4px;
     font-size: 80px;
     margin: 0 auto;
-    margin-top: 150px;
+    margin-top: 120px;
+}
+h2 {
+    color: black !important;
 }
 h2, p {
     font-family: 'Roboto', sans-serif;
     color: #697474;
-    display: inline-block;
 }

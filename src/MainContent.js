@@ -46,13 +46,10 @@ class MainContent extends Component {
             }
             else {
                 return (
-                    <div class="wrapper">
-                        <div className="top-three-cities-population">
-                            <Link to={"/search-city/" + this.state.items[0].name} className="city">{this.state.items[0].name}</Link>
-                            <Link to={"/search-city/" + this.state.items[1].name} className="city">{this.state.items[1].name}</Link>
-                            <Link to={"/search-city/" + this.state.items[2].name} className="city" id="last-city">{this.state.items[2].name}</Link>
-                            {console.log(this.state)}
-                        </div>
+                    <div className="wrapper">
+                        <Link to={"/search-city/" + this.state.items[0].name} className="city" id="city-1"><p>{this.state.items[0].name}</p></Link>
+                        <Link to={"/search-city/" + this.state.items[1].name} className="city" id="city-2"><p>{this.state.items[1].name}</p></Link>
+                        <Link to={"/search-city/" + this.state.items[2].name} className="city" id="city-3"><p>{this.state.items[2].name}</p></Link>
                     </div>
                 )
             }
