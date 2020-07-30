@@ -14,10 +14,11 @@ h1 {
     margin: 0 auto;
     margin-top: 120px;
 }
-h2 {
-    color: black !important;
+.searchPage h2{
+    color: #697474;
+    font-family: 'Roboto', sans-serif;
 }
-h2, p {
+p {
     font-family: 'Roboto', sans-serif;
     color: #697474;
 }

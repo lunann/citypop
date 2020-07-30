@@ -23,7 +23,8 @@ class SearchCity extends Component {
 
     render(){
         return (
-            <div class="homePage">            
+            <div class="searchPage">
+                <p id="search-type">search city to find out population</p>
                 <h2>Search by city</h2>
                 <div className="input-field">
                     <input type="text" placeholder="enter city here" value={this.state.value} onChange={this.handleChange} />

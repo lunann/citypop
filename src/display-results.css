@@ -8,10 +8,11 @@
     border-radius: 2px;
 }
 .population-info h3 {
-    font-size: 50px;
+    font-size: 45px;
     margin: 0px;
     font-family: 'Roboto', sans-serif;
-    padding-top: 10px;
+    padding: 20px;
+    color: #161616;
 }
 .population-info p {
     font-size: 15px;
@@ -23,15 +24,15 @@
     display: block;
     padding: 15px;
     text-decoration: none;
-    color: black;
+    color: #161616;
     background-color: white;
     width: 300px;
     margin: 0 auto;
     border-radius: 2px;
-    border: 1px solid black;
-}
-.city {
-    box-shadow: 10px 10px black;
+    border: 1px solid #161616;
+    box-shadow: 10px 10px #161616;
+    transition-timing-function: linear;
+    transition: 0.5s;
 }
 .city:hover {
     box-shadow: 0px 0px;
@@ -42,16 +43,23 @@
 .wrapper p {
     margin: 0px;
 }
-.city#1{
-    box-shadow: -10px 10px black;
-}
 #search-result-name {
-    color: #5d5d5d;
+    color: #161616;
+    font-family: 'Lalezar', cursive;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    letter-spacing: 1px;
 }
 .result-field {
     padding: 5px;
     width: 300px;
     margin: 0 auto;
     border-radius: 4px;
-    border: 3px solid #5d5d5d;
+    border: 1px solid #161616;
+    background-color: #f6d13a;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+#search-type{
+    font-size: 15px !important;
 }

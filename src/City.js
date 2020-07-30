@@ -43,8 +43,8 @@ class City extends Component {
                 return (
                     <div>
                         <p>city</p>
-                        <h2 style={{ textTransform: 'uppercase'}}>{this.state.cityId}</h2>
-                        <p>Hittar inte staden</p>
+                        <h2 id="search-result-name" style={{ textTransform: 'uppercase'}}>{this.state.cityId}</h2>
+                        <p>Couldn't find the city you where searching for</p>
                     </div>
                 );
             }

@@ -36,23 +36,13 @@ class MainContent extends Component {
             );
         }
         else {
-            if (this.state.items.length == 0){
-                return (
-                    <div>
-                        <h2>{this.state.value}</h2>
-                        <p>Hittar inte landet</p>
-                    </div>
-                );
-            }
-            else {
-                return (
-                    <div className="wrapper">
-                        <Link to={"/search-city/" + this.state.items[0].name} className="city" id="city-1"><p>{this.state.items[0].name}</p></Link>
-                        <Link to={"/search-city/" + this.state.items[1].name} className="city" id="city-2"><p>{this.state.items[1].name}</p></Link>
-                        <Link to={"/search-city/" + this.state.items[2].name} className="city" id="city-3"><p>{this.state.items[2].name}</p></Link>
-                    </div>
-                )
-            }
+            return (
+                <div className="wrapper">
+                    <Link to={"/search-city/" + this.state.items[0].name} className="city" id="city-1"><p>{this.state.items[0].name}</p></Link>
+                    <Link to={"/search-city/" + this.state.items[1].name} className="city" id="city-2"><p>{this.state.items[1].name}</p></Link>
+                    <Link to={"/search-city/" + this.state.items[2].name} className="city" id="city-3"><p>{this.state.items[2].name}</p></Link>
+                </div>
+            )    
         }
     }
 }

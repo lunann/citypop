@@ -2,6 +2,7 @@ import React, {Component } from 'react';
 import { Link } from 'react-router-dom'
 
 import './search.css'
+import './index.css'
 
 class SearchCountry extends Component {
     
@@ -23,7 +24,8 @@ class SearchCountry extends Component {
 
     render(){
         return (
-            <div class="homePage">            
+            <div class="searchPage">
+                <p id="search-type">search country to find out cities with highest population</p>
                 <h2>Search by country</h2>
                 <div className="input-field">
                     <input type="text" placeholder="enter country here" value={this.state.value} onChange={this.handleChange} />
