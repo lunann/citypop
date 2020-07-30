@@ -1,6 +1,8 @@
 import React, {Component } from 'react';
 import { Link } from 'react-router-dom'
 
+import './search.css'
+
 class SearchCountry extends Component {
     
     constructor(props) {
@@ -23,8 +25,10 @@ class SearchCountry extends Component {
         return (
             <div class="homePage">            
                 <h2>Search by country</h2>
-                <input type="text" placeholder="enter country here" value={this.state.value} onChange={this.handleChange} />
-                <Link to={"/search-country/"+this.state.value}><input type="submit" value="search"/></Link>
+                <div className="input-field">
+                    <input type="text" placeholder="enter country here" value={this.state.value} onChange={this.handleChange} />
+                    <Link to={"/search-country/"+this.state.value}><input type="submit" value="search"/></Link>
+                </div>
             </div>
         )
     }

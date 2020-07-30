@@ -25,8 +25,10 @@ class SearchCity extends Component {
         return (
             <div class="homePage">            
                 <h2>Search by city</h2>
-                <input type="text" placeholder="enter city here" value={this.state.value} onChange={this.handleChange} />
-                <Link to={"/search-city/"+this.state.value}><input type="submit" value="search"/></Link>
+                <div className="input-field">
+                    <input type="text" placeholder="enter city here" value={this.state.value} onChange={this.handleChange} />
+                    <Link to={"/search-city/"+this.state.value}><input type="submit" value="search"/></Link>
+                </div>
             </div>
         )
     }
