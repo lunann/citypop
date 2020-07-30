@@ -6,10 +6,15 @@
     width: 300px;
     margin: 0 auto;
     border-radius: 2px;
-    border: 1px solid black;
+}
+.population-info h3 {
+    font-size: 50px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 10px;
 }
 .population-info p {
-    font-size: 50px;
+    font-size: 15px;
 }
 .wrapper {
     text-align: center;
@@ -26,4 +31,15 @@
 }
 .city#last-city {
     border-bottom: 0px;
+}
+#search-result-name {
+    color: #5d5d5d;
+}
+.result-field {
+    padding: 5px;
+    background-color: #e89897;
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 4px;
+    border: 1px solid #5d5d5d;
 }

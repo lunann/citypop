@@ -16,5 +16,6 @@ h1 {
 }
 h2, p {
     font-family: 'Roboto', sans-serif;
-    color: #697474
+    color: #697474;
+    display: inline-block;
 }
