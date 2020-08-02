@@ -25,9 +25,9 @@ class SearchCountry extends Component {
     render(){
         return (
             <div class="searchPage">
-                <p id="search-type">search country to find out cities with highest population</p>
-                <h2>Search by country</h2>
-                <div className="input-field">
+                <p id="search-type" data-aos="zoom-in" data-aos-duration="1200">search country to find out cities with highest population</p>
+                <h2 data-aos="zoom-in" data-aos-duration="1200">Search by country</h2>
+                <div className="input-field" data-aos="zoom-in" data-aos-duration="1200">
                     <input type="text" placeholder="enter country here" value={this.state.value} onChange={this.handleChange} />
                     <Link to={"/search-country/"+this.state.value}><input type="submit" value="search"/></Link>
                 </div>

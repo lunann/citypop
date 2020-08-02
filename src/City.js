@@ -42,18 +42,19 @@ class City extends Component {
             if (this.state.items.length == 0){
                 return (
                     <div>
-                        <p>city</p>
-                        <h2 id="search-result-name" style={{ textTransform: 'uppercase'}}>{this.state.cityId}</h2>
-                        <p>Couldn't find the city you where searching for</p>
+                        <p data-aos="zoom-in" data-aos-duration="1200">city</p>
+                        <h2 id="search-result-name" style={{ textTransform: 'uppercase'}}  data-aos="zoom-in" data-aos-duration="1200">{this.state.cityId}</h2>
+                        <p data-aos="zoom-in" data-aos-duration="1200">Couldn't find the city you where searching for</p>
+                        <Link to="/search-city"><p data-aos="zoom-in" data-aos-duration="1200">search again</p></Link>
                     </div>
                 );
             }
             else {
                 return (
                     <div class="city-page">
-                        <p id="search-type">population in</p>
-                        <h2 style={{ textTransform: 'uppercase'}} id="search-result-name">{this.state.cityId}</h2>
-                            <div className="result-field">
+                        <p id="search-type" data-aos="zoom-in" data-aos-duration="1200">population in</p>
+                        <h2 style={{ textTransform: 'uppercase'}} id="search-result-name" data-aos="zoom-in" data-aos-duration="1200">{this.state.cityId}</h2>
+                            <div className="result-field" data-aos="zoom-in" data-aos-duration="1200">
                                 <div className="population-info">
                                     <h3><NumberFormat value={this.state.items[0].population} displayType={'text'} thousandSeparator={true}/></h3>
                                 </div>

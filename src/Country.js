@@ -41,17 +41,18 @@ class Country extends Component {
             if (this.state.items.length == 0){
                 return (
                     <div>
-                        <p>country</p>
-                        <h2 style={{ textTransform: 'uppercase'}} id="search-result-name">{this.state.countryId}</h2>
-                        <p>Couldn't find the country you where searching for</p>
+                        <p data-aos="zoom-in" data-aos-duration="1200">country</p>
+                        <h2 style={{ textTransform: 'uppercase'}} id="search-result-name" data-aos="zoom-in" data-aos-duration="1200">{this.state.countryId}</h2>
+                        <p data-aos="zoom-in" data-aos-duration="1200">Couldn't find the country you where searching for</p>
+                        <Link to="/search-country"><p data-aos="zoom-in" data-aos-duration="1200">search again</p></Link>
                     </div>
                 );
             }
             else {
                 return (
                     <div class="homePage"> 
-                        <p id="search-type">top three populated cities in</p>
-                        <h2 id="search-result-name" style={{ textTransform: 'uppercase'}}>{this.state.countryId}</h2>
+                        <p id="search-type" data-aos="zoom-in" data-aos-duration="1200">top three populated cities in</p>
+                        <h2 id="search-result-name" style={{ textTransform: 'uppercase'}} data-aos="zoom-in" data-aos-duration="1200">{this.state.countryId}</h2>
                         <MainContent countryCode={this.state.items[0].countryCode}/>  
                     </div>
                 )

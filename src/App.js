@@ -11,16 +11,21 @@ import Country from "./Country"
 import './fonts.css'
 import './App.css'
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 //Population land
 //http://api.geonames.org/search?name_equals=france&type=json&username=weknowit
 //Population städer länder
 //http://api.geonames.org/search?country=FR&type=json&username=weknowit
 
 function App () {
+    AOS.init()
+    
     return (
         <Router>
             <div className="App">
-                <Link to="/"><h1>Citypop</h1></Link>
+                <Link to="/"><h1 data-aos="fade-down" data-aos-duration="1000">Citypop</h1></Link>
                 <Switch>
                     <Route exact path="/" component={Home}/>
                     <Route exact path="/search-city" component={SearchCity}/>
@@ -35,9 +40,9 @@ function App () {
 
 const Home = () => (
     <div className="home">
-        <Link className="hyperlinks-nav" id="search-city" to='/search-city'>
+        <Link className="hyperlinks-nav" id="search-city" to='/search-city' data-aos="fade-right" data-aos-duration="1700">
                 <p>Search by city</p></Link>
-        <Link className="hyperlinks-nav" id="search-country" to='/search-country'>
+        <Link className="hyperlinks-nav" id="search-country" to='/search-country' data-aos="fade-left" data-aos-duration="1700">
                 <p>Search by country</p></Link>
     </div>
 );
