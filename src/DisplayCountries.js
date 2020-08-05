@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 import './display-results.css'
 import './index.css'
 
-import MainContent from './MainContent'
+import Countries from './Countries'
 
-class Country extends Component {
+class DisplayCountries extends Component {
     
     constructor(props) {
         super(props);
@@ -53,11 +53,11 @@ class Country extends Component {
                     <div class="homePage"> 
                         <p id="search-type" data-aos="zoom-in" data-aos-duration="1200">top three populated cities in</p>
                         <h2 id="search-result-name" style={{ textTransform: 'uppercase'}} data-aos="zoom-in" data-aos-duration="1200">{this.state.countryId}</h2>
-                        <MainContent countryCode={this.state.items[0].countryCode}/>
+                        <Countries countryCode={this.state.items[0].countryCode}/>
                     </div>
                 )
             }
         }
     }
 }
-export default Country
+export default DisplayCountries

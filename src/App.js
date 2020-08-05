@@ -2,11 +2,11 @@ import React, {Component } from 'react';
 import {HashRouter as Router, Switch, Route} from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
-import MainContent from "./MainContent"
+import Countries from "./Countries"
 import SearchCity from "./SearchCity"
 import SearchCountry from "./SearchCountry"
-import City from "./City"
-import Country from "./Country"
+import DisplayCity from "./DisplayCity"
+import DisplayCountries from "./DisplayCountries"
 
 import './fonts.css'
 import './App.css'
@@ -30,8 +30,8 @@ function App () {
                     <Route exact path="/" component={Home}/>
                     <Route exact path="/search-city" component={SearchCity}/>
                     <Route exact path="/search-country" component={SearchCountry}/>
-                    <Route path="/search-city/:cityId" component={City}/>
-                    <Route path="/search-country/:countryId" component={Country}/>                
+                    <Route path="/search-city/:cityId" component={DisplayCity}/>
+                    <Route path="/search-country/:countryId" component={DisplayCountries}/>                
                 </Switch>
             </div>
         </Router>

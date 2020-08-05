@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import './display-results.css'
 
-class MainContent extends Component {
+class Countries extends Component {
     
     constructor(props) {
         super(props);
@@ -46,4 +46,4 @@ class MainContent extends Component {
         }
     }
 }
-export default MainContent
+export default Countries

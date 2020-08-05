@@ -5,7 +5,7 @@ import NumberFormat from 'react-number-format';
 import './display-results.css'
 import './index.css'
 
-class City extends Component {
+class DisplayCity extends Component {
     
     constructor(props) {
         super(props);
@@ -67,4 +67,4 @@ class City extends Component {
         
     }
 }
-export default City
+export default DisplayCity
