@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import NumberFormat from 'react-number-format'; 
 
 import './display-results.css'
+import './index.css'
 
 class City extends Component {
     
@@ -35,7 +36,7 @@ class City extends Component {
         
         if (!isLoaded){
             return (
-                <div>Loading...</div>
+                <div><p>Loading...</p></div>
             );
         }
         else {
@@ -45,7 +46,7 @@ class City extends Component {
                         <p data-aos="zoom-in" data-aos-duration="1200">city</p>
                         <h2 id="search-result-name" style={{ textTransform: 'uppercase'}}  data-aos="zoom-in" data-aos-duration="1200">{this.state.cityId}</h2>
                         <p data-aos="zoom-in" data-aos-duration="1200">Couldn't find the city you where searching for</p>
-                        <Link to="/search-city"><p data-aos="zoom-in" data-aos-duration="1200">search again</p></Link>
+                        <Link to="/search-city" id="search-again" data-aos="zoom-in" data-aos-duration="1200"><p>search again</p></Link>
                     </div>
                 );
             }

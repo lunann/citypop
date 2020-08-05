@@ -34,7 +34,7 @@ class Country extends Component {
         
         if (!isLoaded){
             return (
-                <div>Loading...</div>
+                <div><p>Loading...</p></div>
             );
         }
         else {
@@ -44,7 +44,7 @@ class Country extends Component {
                         <p data-aos="zoom-in" data-aos-duration="1200">country</p>
                         <h2 style={{ textTransform: 'uppercase'}} id="search-result-name" data-aos="zoom-in" data-aos-duration="1200">{this.state.countryId}</h2>
                         <p data-aos="zoom-in" data-aos-duration="1200">Couldn't find the country you where searching for</p>
-                        <Link to="/search-country"><p data-aos="zoom-in" data-aos-duration="1200">search again</p></Link>
+                        <Link to="/search-country" id="search-again" data-aos="zoom-in" data-aos-duration="1200"><p>search again</p></Link>
                     </div>
                 );
             }
@@ -53,7 +53,7 @@ class Country extends Component {
                     <div class="homePage"> 
                         <p id="search-type" data-aos="zoom-in" data-aos-duration="1200">top three populated cities in</p>
                         <h2 id="search-result-name" style={{ textTransform: 'uppercase'}} data-aos="zoom-in" data-aos-duration="1200">{this.state.countryId}</h2>
-                        <MainContent countryCode={this.state.items[0].countryCode}/>  
+                        <MainContent countryCode={this.state.items[0].countryCode}/>
                     </div>
                 )
             }

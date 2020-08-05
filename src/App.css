@@ -4,7 +4,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 17px;
 }
-.hyperlinks-nav {
+.search-type {
     margin: 50px;
     background-color: white;
     display: inline-block;
@@ -12,17 +12,21 @@
     height: 100px;
     border-radius: 2px;
     border: 1px solid black;
-    transition-timing-function: linear;
-   
-    transition: 0.5s;
 }
-.hyperlinks-nav#search-city {
+.search-type p {
+    margin-top: 40px;
+}
+.search-type#search-city {
     box-shadow: -10px 10px black;
 }
-.hyperlinks-nav#search-country {
+.search-type#search-country {
     box-shadow: 10px 10px black;
 }
-.hyperlinks-nav#search-city:hover, .hyperlinks-nav#search-country:hover {
+#search-city, #search-country{
+    transition-timing-function: linear;
+    transition: 0.5s;
+}
+.search-type#search-city:hover, .search-type#search-country:hover {
     box-shadow: 0px 0px;
     
 }

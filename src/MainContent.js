@@ -32,20 +32,18 @@ class MainContent extends Component {
         
         if (!isLoaded){
             return (
-                <div>Loading...</div>
+                <div><p>Loading...</p></div>
             );
         }
         else {
             return (
                 <div className="wrapper">
-                    <Link to={"/search-city/" + this.state.items[0].name} className="city" id="city-1" data-aos="fade-right" data-aos-duration="1200"><p>{this.state.items[0].name}</p></Link>
-                    <Link to={"/search-city/" + this.state.items[1].name} className="city" id="city-2" data-aos="fade-left" data-aos-duration="1200"><p>{this.state.items[1].name}</p></Link>
-                    <Link to={"/search-city/" + this.state.items[2].name} className="city" id="city-3" data-aos="fade-right" data-aos-duration="1200"><p>{this.state.items[2].name}</p></Link>
+                    <Link to={"/search-city/" + this.state.items[0].name} className="city" id="city-1" data-aos-delay="3000" data-aos="fade-right" data-aos-duration="3000"><p>{this.state.items[0].name}</p></Link>
+                    <Link to={"/search-city/" + this.state.items[1].name} className="city" id="city-2" data-aos="fade-left" data-aos-duration="3000"><p>{this.state.items[1].name}</p></Link>
+                    <Link to={"/search-city/" + this.state.items[2].name} className="city" id="city-3" data-aos="fade-right" data-aos-duration="3000"><p>{this.state.items[2].name}</p></Link>
                 </div>
             )    
         }
     }
 }
 export default MainContent
-
-//.sort((a,b) => b.population - a.population)

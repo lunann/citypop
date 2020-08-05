@@ -22,3 +22,23 @@ p {
     font-family: 'Roboto', sans-serif;
     color: #697474;
 }
+#search-again {
+    width: 150px;
+    height: 30px;
+    background-color: white;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 2px;
+    border: 1px solid #161616;
+    box-shadow: 10px 10px #161616;
+    transition-timing-function: linear;
+    transition: 0.5s;
+}
+#search-again p {
+    padding: 0px;
+    margin-top: 6px;
+}
+#search-again:hover {
+    box-shadow: 0px 0px;
+}

@@ -40,9 +40,9 @@ function App () {
 
 const Home = () => (
     <div className="home">
-        <Link className="hyperlinks-nav" id="search-city" to='/search-city' data-aos="fade-right" data-aos-duration="1700">
+        <Link className="search-type" id="search-city" to='/search-city' data-aos="fade-right" data-aos-duration="1700">
                 <p>Search by city</p></Link>
-        <Link className="hyperlinks-nav" id="search-country" to='/search-country' data-aos="fade-left" data-aos-duration="1700">
+        <Link className="search-type" id="search-country" to='/search-country' data-aos="fade-left" data-aos-duration="1700">
                 <p>Search by country</p></Link>
     </div>
 );
