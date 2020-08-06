@@ -27,7 +27,7 @@ class Countries extends Component {
 
     render () {
                 
-        var { isLoaded, items } = this.state;
+        var { isLoaded } = this.state;
         
         if (!isLoaded){
             return (

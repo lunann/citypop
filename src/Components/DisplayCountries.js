@@ -30,7 +30,7 @@ class DisplayCountries extends Component {
     }
 
     render(){
-        var { isLoaded, items } = this.state;
+        var { isLoaded } = this.state;
         
         if (!isLoaded){
             return (
@@ -38,7 +38,7 @@ class DisplayCountries extends Component {
             );
         }
         else {
-            if (this.state.items.length == 0){
+            if (this.state.items.length === 0){
                 return (
                     <div>
                         <p data-aos="zoom-in" data-aos-duration="1200">country</p>

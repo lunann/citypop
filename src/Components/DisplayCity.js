@@ -15,9 +15,6 @@ class DisplayCity extends Component {
             isLoaded: false,
             cityId: this.props.match.params.cityId
         }
-        
-        console.log(this.state.cityId)
- 
     }
     componentDidMount() {
         fetch('http://api.geonames.org/search?name_equals=' + this.state.cityId + '&cities=cities1000&orderby=population&type=json&username=weknowit')
@@ -31,16 +28,15 @@ class DisplayCity extends Component {
     }
 
     render(){
-        var { isLoaded, items } = this.state;
+        var { isLoaded } = this.state;
 
-        
         if (!isLoaded){
             return (
                 <div><p>Loading...</p></div>
             );
         }
         else {
-            if (this.state.items.length == 0){
+            if (this.state.items.length === 0){
                 return (
                     <div class="city-page">
                         <p data-aos="zoom-in" data-aos-duration="1200">city</p>

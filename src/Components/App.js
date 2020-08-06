@@ -1,8 +1,7 @@
-import React, {Component } from 'react';
+import React from 'react';
 import {HashRouter as Router, Switch, Route} from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
-import Countries from "./Countries"
 import SearchCity from "./SearchCity"
 import SearchCountry from "./SearchCountry"
 import DisplayCity from "./DisplayCity"
