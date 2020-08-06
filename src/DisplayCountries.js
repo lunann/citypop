@@ -50,7 +50,7 @@ class DisplayCountries extends Component {
             }
             else {
                 return (
-                    <div class="homePage"> 
+                    <div> 
                         <p id="search-type" data-aos="zoom-in" data-aos-duration="1200">top three populated cities in</p>
                         <h2 id="search-result-name" style={{ textTransform: 'uppercase'}} data-aos="zoom-in" data-aos-duration="1200">{this.state.countryId}</h2>
                         <Countries countryCode={this.state.items[0].countryCode}/>

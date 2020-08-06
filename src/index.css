@@ -5,6 +5,8 @@ body {
 }
 a {
     text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: #161616;
 }
 h1 {
     font-family: 'Alfa Slab One', cursive;
@@ -21,6 +23,14 @@ h1 {
 p {
     font-family: 'Roboto', sans-serif;
     color: #697474;
+    font-size: 15px;
+}
+h3 {
+    font-size: 45px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    color: #161616;
 }
 #search-again {
     width: 150px;

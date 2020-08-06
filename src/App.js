@@ -14,11 +14,6 @@ import './App.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-//Population land
-//http://api.geonames.org/search?name_equals=france&type=json&username=weknowit
-//Population städer länder
-//http://api.geonames.org/search?country=FR&type=json&username=weknowit
-
 function App () {
     AOS.init()
     
@@ -47,4 +42,4 @@ const Home = () => (
     </div>
 );
 
-export default App;
+export default App

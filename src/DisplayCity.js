@@ -42,7 +42,7 @@ class DisplayCity extends Component {
         else {
             if (this.state.items.length == 0){
                 return (
-                    <div>
+                    <div class="city-page">
                         <p data-aos="zoom-in" data-aos-duration="1200">city</p>
                         <h2 id="search-result-name" style={{ textTransform: 'uppercase'}}  data-aos="zoom-in" data-aos-duration="1200">{this.state.cityId}</h2>
                         <p data-aos="zoom-in" data-aos-duration="1200">Couldn't find the city you where searching for</p>
