@@ -1,7 +1,7 @@
 import React, {Component } from 'react';
 import { Link } from 'react-router-dom'
 
-import './display-results.css'
+import './css/display-results.css'
 
 class Countries extends Component {
     

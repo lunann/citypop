@@ -2,8 +2,8 @@ import React, {Component } from 'react';
 import { Link } from 'react-router-dom'
 import NumberFormat from 'react-number-format'; 
 
-import './display-results.css'
-import './index.css'
+import './css/index.css'
+import './css/display-results.css'
 
 class DisplayCity extends Component {
     

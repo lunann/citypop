@@ -1,8 +1,8 @@
 import React, {Component } from 'react';
 import { Link } from 'react-router-dom'
 
-import './display-results.css'
-import './index.css'
+import './css/index.css'
+import './css/display-results.css'
 
 import Countries from './Countries'
 

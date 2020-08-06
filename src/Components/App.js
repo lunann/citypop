@@ -8,8 +8,8 @@ import SearchCountry from "./SearchCountry"
 import DisplayCity from "./DisplayCity"
 import DisplayCountries from "./DisplayCountries"
 
-import './fonts.css'
-import './App.css'
+import './css/fonts.css'
+import './css/App.css'
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
